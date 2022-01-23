@@ -1,0 +1,159 @@
+/* Copyright © 2022 Mobintel Pty Ltd - All Rights Reserved
+* Unauthorized copying of this file, via any medium is strictly prohibited
+* Proprietary and confidential
+* Initial author: Vladimir Pikharev
+*/
+/* You can add global styles to this file, and also import other style files */
+.d-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container-img-preview {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.9);
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.header-img-preview {
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+
+.actions-img-preview {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px; 
+}
+
+.close-img-preview {
+    margin-left: 18px;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.download-img-preview {
+    font: 600 14px/24px 'Montserrat', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    -webkit-tap-highlight-color: transparent;
+}
+.download-img-preview svg{
+    margin-right: 10px;
+}
+
+.image-container-img-preview {
+    width: 100%;
+    height: calc(100% - 240px);
+    display: flex;
+}
+
+.left-navigation-img-preview,
+.right-navigation-img-preview {
+    width: 15%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.navigation-button-img-preview {
+    background: #757575;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 12px;
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.image-cont-img-preview {
+    cursor: grab;
+    overflow: auto;
+    max-width: 70%;
+    width: 100%;
+    max-height: 100%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.slider-image-img-preview {
+    animation-name: fadeIn;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    //background-size: cover;
+    background-size: contain;
+    background-position: center;
+    border-radius: 6px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-img-preview{
+    width: 100%;
+    height: 120px;
+}
+
+.footer-percent{
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    font: 600 14px/24px 'Montserrat', sans-serif;
+    margin: 0 12px;
+    padding: 6px 8px;
+}
+
+.footer-zoom-btn{
+    font: 600 14px/24px 'Montserrat', sans-serif;
+    margin: 0 12px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.footer-zoom-btn svg{
+    margin: 0 8px;
+}
+
+.footer-zoom-btn.disabled{
+    color: #BDBDBD;
+}
+.footer-zoom-btn.disabled svg path{
+    fill: #BDBDBD;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.image-cont-img-preview{
+  scrollbar-color: #E0E0E0 #757575;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar{
+    width: 8px;
+    height:10px;
+    background-color: #757575;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    max-height: 90%;
+    background-color: #E0E0E0;
+  }
+}

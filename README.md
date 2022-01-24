@@ -8,13 +8,18 @@
 import scss file in the root.
 
 ```html
-import ...
+@import "./../node_modules/kisa-image-preview-npm/styles.scss";
 ```
 
 ```html
-import ...
+import { init } from 'kisa-image-preview-npm';
 
-imageArray = [];
+imageArray = [
+  {
+    name: 'test',
+    previewUrl: 'https://.....'
+  }
+];
 
 init(imageArray)
 

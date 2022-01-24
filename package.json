@@ -1,6 +1,6 @@
 {
   "name": "kisa-image-preview-npm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "author": "kisa-image-preview-npm",
   "description": "kisa image preview",
@@ -16,7 +16,7 @@
     "mage preview",
     "npm preview"
   ],
-  "license": "MIT",
+  "license": "GNU",
   "bugs": {
     "url": "https://github.com/dvlprDV/kisa-image-preview-npm/issues"
   },

@@ -83,7 +83,7 @@ export function closeImgPreview () {
 
 function forceDownload(url = imgArray[currIndex].previewUrl, fileName = imgArray[currIndex].name){
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
+  xhr.open("GET", imgArray[currIndex].previewUrl, true);
   xhr.responseType = "blob";
   xhr.onload = function(){
     const urlCreator = window.URL || window.webkitURL;

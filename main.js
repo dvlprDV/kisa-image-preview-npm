@@ -24,9 +24,9 @@ export function prevImg() {
   }
 }
 
-export function init(arrayImg) {
+export function init(arrayImg, index) {
   imgArray = arrayImg;
-  currIndex = 0;
+  currIndex = index || 0;
   const body = document.getElementsByTagName('body')[0];
   console.dir(body);
   const imageContainer = document.createElement('div');

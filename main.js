@@ -8,6 +8,7 @@ let imgArray = [];
 let currIndex = 0;
 let pos = { top: 0, left: 0, x: 0, y: 0 };
 let ele;
+
 export function nextImg() {
   if (imgArray.length > (currIndex + 1)) {
     currIndex++;
@@ -28,7 +29,6 @@ export function init(arrayImg, index) {
   imgArray = arrayImg;
   currIndex = index || 0;
   const body = document.getElementsByTagName('body')[0];
-  console.dir(body);
   const imageContainer = document.createElement('div');
   imageContainer.classList.add('main-container-img-preview');
   body.insertBefore(imageContainer, body.children[0]);
@@ -41,6 +41,7 @@ export function init(arrayImg, index) {
   document.getElementById('download-img-preview').addEventListener('click', forceDownload);
   document.getElementById('footer-zoom-btn').addEventListener('click', zoomIn);
   document.getElementById('footer-zoom-btn-zoom-out').addEventListener('click', zoomOut);
+  document.addEventListener('keydown', keyboardHandler);
   ele = document.getElementById('image-cont-img-preview');
   ele.addEventListener('mousedown', mouseDownHandler);
   ele.scrollTop = 100;
@@ -60,6 +61,25 @@ const mouseDownHandler = function (e) {
 
   document.addEventListener('mousemove', mouseMoveHandler);
   document.addEventListener('mouseup', mouseUpHandler);
+};
+
+const keyboardHandler = function (e) {
+  if (e.key === 'Escape') {
+    closeImgPreview();
+  }
+  switch (e.key) {
+    case 'Escape': closeImgPreview();
+    break;
+    case 'ArrowLeft': prevImg();
+    break;
+    case 'ArrowRight': nextImg();
+    break;
+    case '+': zoomIn();
+    break;
+    case '-': zoomOut();
+    break;
+    default: return;
+  }
 };
 
 const mouseMoveHandler = function (e) {
